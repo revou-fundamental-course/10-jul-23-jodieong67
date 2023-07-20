@@ -1,0 +1,190 @@
+html, body {
+  margin:0;
+  padding:0;
+  height:100%;
+}
+
+/*Header*/
+#header-background{
+  width : 100%;
+  height : 150px;
+  background:url('Bg_header.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #5403CE;
+} 
+
+#body {
+  padding:10px;
+  padding-bottom:60px;   /* Height of the footer */
+}
+
+#footer-background{
+  position:fixed;
+  left:0px;
+  bottom:0px;
+  height:30px;
+  width:100%;
+  background:#999;
+}
+
+/* Left CSS Form */
+.bmi_form{
+  font-family: monospace, Courier, 'Courier New';
+  position:absolute;
+}
+
+.intro{
+  text-align: left;
+  line-height: 1.2;
+}
+
+.form-container{
+  width :100%;
+  font-family: monospace, Courier, 'Courier New';
+  border: 2px solid  #5403CE;
+  margin-block: 10px;
+  border-radius: 8px;
+}
+
+.form-group{
+  font-family: monospace, Courier, 'Courier New';
+  margin : 15px 15px 15px 15px;
+  height : 270px;
+}
+
+
+.input-group{
+  background-color: #5403CE;
+  width:auto;
+  height : 35px;
+  margin-bottom: 20px;
+  display:block;
+}
+
+
+#basic-addon1{
+ width :  0px;
+ color: white;
+}
+
+.input-field {
+  width: 90%;
+  height : 60%;
+  outline: none;
+}
+
+.input-field:focus {
+  border: 2px dotted #a46bfa;
+  background-color: #eaddfc;
+}
+
+.error{
+  margin-top:2px;
+  margin-bottom:2px;
+}
+
+span{
+  color:red;
+  font-size: 12px;
+}
+
+/* Set a style for the submit button */
+
+.btnBMI {
+  background-color: #5403CE;
+  color: white;
+  font-family: monospace, Courier, 'Courier New';
+  border: 2px solid  #5403CE;
+  border-color: #5403CE;
+  cursor: pointer;
+  width: 20%;
+  height : 50px;
+  opacity: 0.9;
+  border-radius: 6px;
+}
+
+.btnReset {
+  background-color: white;
+  color: grey;
+  font-family: monospace, Courier, 'Courier New';
+  border: 2px solid black;
+  border-color: grey;
+  cursor: pointer;
+  width: 20%;
+  height : 50px;
+  opacity: 0.9;
+  border-radius: 6px;
+}
+
+.btnBMI:hover {
+  opacity: 1;
+  background-color: #eaddfc;
+  color: black;
+  border: 2px solid  #eaddfc;
+  border-color: #a46bfa;
+  font-family: monospace, Courier, 'Courier New';
+}
+
+.btnReset:hover {
+  opacity: 1;
+  background-color: grey;
+  color: white;
+  font-family: monospace, Courier, 'Courier New';
+}
+
+/*Right CSS BMI Calculator*/
+.bmi_container{
+  justify-content: center;
+  align-items: center;
+}
+.bmi_calculator{
+  margin-left : 150px;
+  margin-top : 50px;
+  background: #3a4452;
+  padding : 20px;
+  border-radius: 10px;
+  width : 450px;
+}
+.bmi_calculator form input{
+  border:0;
+  outline :0;
+  height : 60px;
+  width : 86px;
+  border-radius: 10px;
+  box-shadow: -12px -12px 19px rgba(255, 255, 255, 0.1),9px 9px 19px rgba(0, 0, 0, 0.2);
+  background: transparent;
+  font-size:16px;
+  color:#fff;
+  cursor: pointer;
+  margin:8px;
+}
+
+form .calculator_screen
+{
+  display: flex;
+  justify-content: flex-end;
+  margin: 20px 0;
+}
+
+form .calculator_screen input
+{
+  text-align : right;
+  flex:1;
+  font-size: 40px;
+  box-shadow: none;
+}
+
+form input.equal{
+  width : 200px;
+}
+
+form input.operator{
+  color :#a46bfa;
+  font-weight: bold;
+}
+
+.bmi_output{
+  color:#3a4452;
+}
+
