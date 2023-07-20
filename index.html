@@ -1,0 +1,140 @@
+<!Doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <title>Let's Practice!</title>
+    </head>
+    <header id="header-background">
+    </header>
+        <body>
+
+                <div class="bmi_form" style="display: flex; height: 100px;">
+                    <div style="width: 50%; margin-top: 20px; margin-left:50px;">
+                            <h1 class="intro"> Kalkulator BMI </h1>
+                            <p class="intro">Berat badan ideal adalah impian semua orang. Tidak hanya memiliki bentuk tubuh
+                            yang menunjang penampilan, berat badan ideal juga menandakan kondisi tubuh yang sehat. Bagaimana
+                            denganmu? <br><br>Yuk! hitung sekarang di kalkulator BMI</p>
+                     <div class = "form-container">
+                     <div id="form-group" class="form-group">
+                            <label for="inputGender">Jenis Kelamin</label><br>
+                            <input type="radio" id="pria" name="gender" value="Pria">
+                            <label for="inputGender">Pria</label>
+                            <input type="radio" id="wanita" name="gender" value="Wanita">
+                            <label for="inputGender">Wanita</label>
+                            <div class="error">
+                                <span id="gender_error"></span>
+                            </div>
+                            
+                            <label for="inputWeight">Berat Badan (KG)</label><br>
+                            <div class="input-group">
+                              <div class="input-group addon">
+                                <span class="input-group-addon" id="basic-addon1">
+                                    <i class="fa fa-edit" style="font-size: 25px;"></i></span>
+                                      <input type="text" class="input-field" id="weight">
+                                      <div class="error">
+                                        <span id="weight_error"></span>
+                                    </div>
+                              </div>
+                            </div>
+
+                            <label for="inputYear">Usia (Tahun)</label><br>
+                            <div class="input-group">
+                              <div class="input-group addon">
+                                <span class="input-group-addon" id="basic-addon1"><i class="fa fa-edit" style="font-size: 25px;"></i></span>
+                                <input type="text" class="input-field" id="year"><br>
+                                <div class="error">
+                                    <span id="year_error"></span>
+                                </div>
+                              </div>
+                            </div>
+
+                            <label for="inputHeight">Tinggi Badan (cm)</label><br>
+                            <div class="input-group">
+                              <div class="input-group addon">
+                                <span class="input-group-addon" id="basic-addon1"><i class="fa fa-edit" style="font-size: 25px;text-align: center;"></i></span>
+                                <input type="text" class="input-field" id="height">
+                                <div class="error">
+                                    <span id="height_error"></span>
+                                </div>
+                              </div>
+                            </div>
+
+                          </div>
+                        </div>
+                          <div class = "button-group">
+                                <button id="btnBMI" class="btnBMI"  value="Calculate">Kalkulasi BMI</button>
+                                <button id="btnReset" class="btnReset" value="Reset" onclick = "clear()">Reset</button>
+                                <p id="output"></p>
+                          </div>
+                          <div>
+                            <h2>Keunggulan Fitur</h2>
+                            <ol>
+                                <li>Menhitung berat badan</li>
+                                <li>Menentukan kategori berat badan ideal atau tidak</li>
+                                <li>Mempersiapkan program penurunan berat badan</li>
+                              </ol> 
+                            <p>Kalkulator ini hanya boleh digunakan oleh orang dewasa (wanita hamil atau menyusui tidak boleh mengandalkan
+                                pembacaan BMI ini) dan tidak ada tindakan yang harus diambil berdasarkan nilainya selain berkonsultasi dengan 
+                                orang yang memenuhi syarat seperti dokter.
+                            </p>
+                            <p>Kalkulator akan memberi Anda gambaran tentang perbandingan berat badan Anda dengan nilai umum. Indeks Messa tubuh
+                                (atau BMI) dihitung sebagai berat badan Anda (dalam kilogram) dibagi dengan kuadrat tinggi badan Anda (dalam meter) 
+                                atau BMI = Kg/M^2.
+                            </p>
+                          </div>
+                    </div>
+            
+                <div class="bmi_container" style="flex-grow: 1;">
+                    <div class="bmi_calculator">
+                        <form>
+                            <div class="calculator_screen">
+                                <input type="text" name="display">
+                            </div>
+                            <div>
+                                <input type="button" value="AC" onclick = "display.value = ' ' " class="operator">
+                                <input type="button" value="DE" onclick = "display.value = display.value.toString().slice(0,-1)" class="operator">
+                                <input type="button" value="." onclick = "display.value += '.' " class="operator">
+                                <input type="button" value="/" onclick = "display.value += '/' " class="operator">
+                            </div>
+                            <div>
+                                <input type="button" value="7" onclick = "display.value += '7' ">
+                                <input type="button" value="8" onclick = "display.value += '8' ">
+                                <input type="button" value="9" onclick = "display.value += '9' ">
+                                <input type="button" value="*" onclick = "display.value += '*' " class="operator">
+                            </div>
+                            <div>
+                                <input type="button" value="4" onclick = "display.value += '4' ">
+                                <input type="button" value="5" onclick = "display.value += '5' ">
+                                <input type="button" value="6" onclick = "display.value += '6' ">
+                                <input type="button" value="-" onclick = "display.value += '-' " class="operator">
+                            </div>
+                            <div>
+                                <input type="button" value="1" onclick = "display.value += '1' ">
+                                <input type="button" value="2" onclick = "display.value += '2' ">
+                                <input type="button" value="3" onclick = "display.value += '3' ">
+                                <input type="button" value="+" onclick = "display.value += '+' " class="operator">
+                            </div>
+                            <div>
+                                <input type="button" value="00" onclick = "display.value += '00' ">
+                                <input type="button" value="0" onclick = "display.value += '0' ">
+                                <input class="equal" type="button" onclick = "display.value = eval(display.value)" value="=" class="operator">
+                            </div>
+                        </form>
+                    </div>
+                    </div>
+            </div>
+                
+            </div>
+            <script src="js/script.js"></script>
+        </body>
+        
+        <footer>
+            <div id="bmi_output" class="bmi_output">
+                <span id="result"></span>
+            </div>
+        </footer>
+</html>
